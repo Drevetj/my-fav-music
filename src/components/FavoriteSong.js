@@ -1,5 +1,5 @@
 import React from 'react';
-import millisToMinutesAndSeconds from './millisToMinutesAndSeconds.js'
+import millisToMinutesAndSeconds from './MillisToMinutesAndSeconds.js'
 
 function FavoriteSong({ favorite, onSongRemoved }) {
   React.useEffect(() => {

@@ -1,6 +1,6 @@
 import React from 'react';
-import millisToMinutesAndSeconds from './millisToMinutesAndSeconds.js'
-import FavoriteSong from './favoriteSong.js';
+import millisToMinutesAndSeconds from './MillisToMinutesAndSeconds.js'
+import FavoriteSong from './FavoriteSong.js';
 
 function SongInfo({searchInfo}) {
   const [songs, setSongs]       = React.useState([])
@@ -8,11 +8,11 @@ function SongInfo({searchInfo}) {
   const [favorite, setFavorite] = React.useState(JSON.parse(localStorage.getItem('favorite')) || '')
 
   React.useEffect(() => {
-    if (!searchInfo.name) {
+    if (!searchInfo.song) {
       return
     }
 
-    fetchSongs(searchInfo.name, searchInfo.limit).then(
+    fetchSongs(searchInfo.song, searchInfo.limit).then(
       songsData => {
         setSongs(songsData)
       },

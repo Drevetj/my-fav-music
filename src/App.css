@@ -26,10 +26,14 @@
   padding: 5px;
 }
 
-.App form h2 {
+.center {
   text-align: center
 }
 
 .App form h2 {
   text-align: center
+}
+
+.p-20 {
+  padding: 20px;
 }
